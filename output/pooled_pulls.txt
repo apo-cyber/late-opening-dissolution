@@ -1,0 +1,63 @@
+Pulls at [0, 3, 6, 9, 12] months, 12 units each, 100 repetitions. Specification at 30 min: 75 % (Interpretation 1: Q = 70)
+Path speed c, set so that at 12 months the fraction of units failing is p = 0.05: S slow release (lin) 0.851; S slow release (acc) 0.851; O spread opening (lin) 0.764; O spread opening (acc) 0.764; M mixed (lin) 0.824; M mixed (acc) 0.824
+
+Path lin, S slow release: true probability of failing [Interpretation 1, 2] at 12 months [0.000, 0.019], at 15 months [0.008, 0.688]
+   Check: negative log-likelihood at the true parameters minus that at the fit: median 3.9, range [0.9, 10.2] (for a linear path at least 0, and of the order of the number of parameters, 8)
+   method    Int. 1: median |log ratio|  within 2x  below half | Int. 2: median |log ratio|  within 2x  below half
+   N1@12      0.00      0.99      0.00  |       2.33      0.16      0.62
+   N5@12      0.00      1.00      0.00  |       2.94      0.04      0.95
+   M1@12      0.00      0.97      0.00  |       1.69      0.21      0.55
+   M5@12      0.00      0.98      0.00  |       1.27      0.26      0.47
+   N5@15      2.15      0.01      0.99  |       3.63      0.03      0.97
+   M5@15      1.75      0.16      0.49  |       0.23      0.84      0.16
+
+Path lin, O spread opening: true probability of failing [Interpretation 1, 2] at 12 months [0.150, 0.018], at 15 months [0.593, 0.301]
+   Check: negative log-likelihood at the true parameters minus that at the fit: median 4.1, range [0.6, 10.3] (for a linear path at least 0, and of the order of the number of parameters, 8)
+   method    Int. 1: median |log ratio|  within 2x  below half | Int. 2: median |log ratio|  within 2x  below half
+   N1@12      5.02      0.07      0.76  |       2.95      0.05      0.59
+   N5@12      5.02      0.05      0.94  |       2.95      0.05      0.71
+   M1@12      0.94      0.37      0.44  |       1.72      0.21      0.50
+   M5@12      0.60      0.58      0.27  |       1.14      0.31      0.39
+   N5@15      6.39      0.15      0.85  |       5.71      0.13      0.75
+   M5@15      0.25      0.89      0.11  |       0.52      0.64      0.25
+
+Path lin, M mixed: true probability of failing [Interpretation 1, 2] at 12 months [0.015, 0.019], at 15 months [0.265, 0.535]
+   Check: negative log-likelihood at the true parameters minus that at the fit: median 4.0, range [0.7, 11.9] (for a linear path at least 0, and of the order of the number of parameters, 8)
+   method    Int. 1: median |log ratio|  within 2x  below half | Int. 2: median |log ratio|  within 2x  below half
+   N1@12      2.79      0.02      0.94  |       2.50      0.14      0.57
+   N5@12      2.79      0.00      0.99  |       2.99      0.06      0.85
+   M1@12      1.51      0.27      0.41  |       1.54      0.20      0.40
+   M5@12      1.14      0.25      0.37  |       1.12      0.31      0.32
+   N5@15      5.58      0.01      0.98  |       3.42      0.11      0.89
+   M5@15      0.71      0.49      0.25  |       0.29      0.92      0.08
+
+Path acc, S slow release: true probability of failing [Interpretation 1, 2] at 12 months [0.000, 0.019], at 15 months [0.765, 0.996]
+   Check: negative log-likelihood at the true parameters minus that at the fit: median -4.4, range [-11.2, 6.7] (for a linear path at least 0, and of the order of the number of parameters, 8)
+   method    Int. 1: median |log ratio|  within 2x  below half | Int. 2: median |log ratio|  within 2x  below half
+   N1@12      0.00      1.00      0.00  |       1.82      0.20      0.55
+   N5@12      0.00      1.00      0.00  |       3.00      0.01      0.99
+   M1@12      0.00      0.95      0.00  |       1.75      0.23      0.45
+   M5@12      0.00      0.96      0.00  |       2.44      0.11      0.87
+   N5@15      6.64      0.00      1.00  |       5.61      0.00      1.00
+   M5@15      5.11      0.07      0.93  |       1.34      0.20      0.80
+
+Path acc, O spread opening: true probability of failing [Interpretation 1, 2] at 12 months [0.148, 0.018], at 15 months [0.909, 0.803]
+   Check: negative log-likelihood at the true parameters minus that at the fit: median 1.7, range [-6.3, 16.5] (for a linear path at least 0, and of the order of the number of parameters, 8)
+   method    Int. 1: median |log ratio|  within 2x  below half | Int. 2: median |log ratio|  within 2x  below half
+   N1@12      5.00      0.04      0.83  |       2.95      0.03      0.71
+   N5@12      5.00      0.02      0.97  |       2.95      0.01      0.82
+   M1@12      0.88      0.41      0.47  |       1.61      0.25      0.54
+   M5@12      1.76      0.23      0.77  |       2.58      0.10      0.90
+   N5@15      6.81      0.03      0.97  |       6.69      0.14      0.86
+   M5@15      1.29      0.23      0.77  |       2.74      0.00      1.00
+
+Path acc, M mixed: true probability of failing [Interpretation 1, 2] at 12 months [0.016, 0.019], at 15 months [0.920, 0.988]
+   Check: negative log-likelihood at the true parameters minus that at the fit: median -2.5, range [-10.8, 8.6] (for a linear path at least 0, and of the order of the number of parameters, 8)
+   method    Int. 1: median |log ratio|  within 2x  below half | Int. 2: median |log ratio|  within 2x  below half
+   N1@12      2.81      0.03      0.91  |       2.82      0.04      0.70
+   N5@12      2.81      0.00      0.98  |       2.98      0.06      0.88
+   M1@12      1.53      0.25      0.49  |       1.62      0.16      0.55
+   M5@12      1.60      0.21      0.73  |       2.54      0.10      0.89
+   N5@15      6.83      0.01      0.99  |       6.71      0.05      0.95
+   M5@15      2.36      0.05      0.95  |       1.78      0.08      0.92
+

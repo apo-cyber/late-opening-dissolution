@@ -1,0 +1,9 @@
+S slow release p=0.10 true [0.000, 0.102]  true median k 0.120
+   fitted with D_max=100.0: median |log ratio| [Int. 1 0.00, Int. 2 2.34]  median estimated k 0.088
+   fitted with D_max= 90.0: median |log ratio| [Int. 1 0.00, Int. 2 1.14]  median estimated k 0.124
+O spread opening p=0.10 true [0.317, 0.102]  true median k 0.250
+   fitted with D_max=100.0: median |log ratio| [Int. 1 0.60, Int. 2 1.12]  median estimated k 0.141
+   fitted with D_max= 90.0: median |log ratio| [Int. 1 0.57, Int. 2 1.09]  median estimated k 0.247
+M mixed p=0.10 true [0.031, 0.102]  true median k 0.146
+   fitted with D_max=100.0: median |log ratio| [Int. 1 1.37, Int. 2 0.92]  median estimated k 0.099
+   fitted with D_max= 90.0: median |log ratio| [Int. 1 1.26, Int. 2 0.97]  median estimated k 0.143

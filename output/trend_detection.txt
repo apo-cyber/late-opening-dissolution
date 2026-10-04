@@ -1,0 +1,46 @@
+Pulls at [0, 3, 6] months, 12 units each. Control 200 runs, the others 60 runs each. Specification at 30 min: 75 %. Significance level 5 % (M: χ²₄ 9.488)
+S slow release T*=12 months (c=0.4247, fraction below R at 6 months 0.0000): 30-min values: 0 months mean 99.5, min 96.1 → 6 months mean 96.3, min 91.3 (median over runs 91.6); 10-min values: mean 36.5 → 25.2; runs with all 36 units at or above 75 %: 1.00
+   Proportion of alarms  M 1.00  N30 mean 0.98  N30 spread 0.20  N30 either 0.92  N10 mean 0.63  eye 0.52   | LR median 36.26, 95th percentile 52.99, negative 0.00
+   Parameter with the largest |z| on an M alarm: L side 0.00, k side 1.00  /  proportion with |z|>1.96: μ_L 0.13, σ_L 0.10, μ_k 1.00, σ_k 0.03
+   Alarms in the runs with all units at or above 75 %  M 1.00  N30 either 0.92  N10 mean 0.63
+
+S slow release T*=24 months (c=0.2124, fraction below R at 6 months 0.0000): 30-min values: 0 months mean 99.5, min 96.3 → 6 months mean 98.4, min 94.9 (median over runs 94.9); 10-min values: mean 37.0 → 31.8; runs with all 36 units at or above 75 %: 1.00
+   Proportion of alarms  M 0.85  N30 mean 0.35  N30 spread 0.08  N30 either 0.27  N10 mean 0.20  eye 0.00   | LR median 15.57, 95th percentile 25.62, negative 0.00
+   Parameter with the largest |z| on an M alarm: L side 0.02, k side 0.98  /  proportion with |z|>1.96: μ_L 0.08, σ_L 0.02, μ_k 0.98, σ_k 0.00
+   Alarms in the runs with all units at or above 75 %  M 0.85  N30 either 0.27  N10 mean 0.20
+
+S slow release T*=36 months (c=0.1416, fraction below R at 6 months 0.0000): 30-min values: 0 months mean 99.5, min 96.0 → 6 months mean 99.0, min 95.8 (median over runs 95.9); 10-min values: mean 37.4 → 32.2; runs with all 36 units at or above 75 %: 1.00
+   Proportion of alarms  M 0.48  N30 mean 0.08  N30 spread 0.03  N30 either 0.08  N10 mean 0.17  eye 0.00   | LR median 8.31, 95th percentile 21.91, negative 0.00
+   Parameter with the largest |z| on an M alarm: L side 0.10, k side 0.90  /  proportion with |z|>1.96: μ_L 0.17, σ_L 0.03, μ_k 0.90, σ_k 0.07
+   Alarms in the runs with all units at or above 75 %  M 0.48  N30 either 0.08  N10 mean 0.17
+
+O spread opening T*=12 months (c=0.3818, fraction below R at 6 months 0.0000): 30-min values: 0 months mean 99.6, min 96.4 → 6 months mean 98.8, min 94.9 (median over runs 95.3); 10-min values: mean 36.0 → 10.2; runs with all 36 units at or above 75 %: 0.98
+   Proportion of alarms  M 0.97  N30 mean 0.18  N30 spread 0.12  N30 either 0.23  N10 mean 0.98  eye 0.05   | LR median 18.45, 95th percentile 31.63, negative 0.00
+   Parameter with the largest |z| on an M alarm: L side 0.79, k side 0.21  /  proportion with |z|>1.96: μ_L 0.98, σ_L 0.29, μ_k 0.26, σ_k 0.14
+   Alarms in the runs with all units at or above 75 %  M 0.97  N30 either 0.24  N10 mean 0.98
+
+O spread opening T*=24 months (c=0.1909, fraction below R at 6 months 0.0000): 30-min values: 0 months mean 99.4, min 96.0 → 6 months mean 99.2, min 96.0 (median over runs 96.2); 10-min values: mean 36.5 → 21.5; runs with all 36 units at or above 75 %: 1.00
+   Proportion of alarms  M 0.48  N30 mean 0.05  N30 spread 0.05  N30 either 0.05  N10 mean 0.70  eye 0.02   | LR median 9.13, 95th percentile 17.00, negative 0.00
+   Parameter with the largest |z| on an M alarm: L side 0.66, k side 0.34  /  proportion with |z|>1.96: μ_L 0.86, σ_L 0.21, μ_k 0.38, σ_k 0.14
+   Alarms in the runs with all units at or above 75 %  M 0.48  N30 either 0.05  N10 mean 0.70
+
+O spread opening T*=36 months (c=0.1273, fraction below R at 6 months 0.0000): 30-min values: 0 months mean 99.5, min 96.5 → 6 months mean 99.5, min 96.2 (median over runs 96.3); 10-min values: mean 37.8 → 26.7; runs with all 36 units at or above 75 %: 1.00
+   Proportion of alarms  M 0.28  N30 mean 0.03  N30 spread 0.08  N30 either 0.02  N10 mean 0.42  eye 0.00   | LR median 6.29, 95th percentile 19.55, negative 0.00
+   Parameter with the largest |z| on an M alarm: L side 0.47, k side 0.53  /  proportion with |z|>1.96: μ_L 0.65, σ_L 0.41, μ_k 0.47, σ_k 0.29
+   Alarms in the runs with all units at or above 75 %  M 0.28  N30 either 0.02  N10 mean 0.42
+
+M mixed T*=12 months (c=0.4118, fraction below R at 6 months 0.0000): 30-min values: 0 months mean 99.6, min 96.4 → 6 months mean 96.9, min 92.1 (median over runs 92.6); 10-min values: mean 36.8 → 10.8; runs with all 36 units at or above 75 %: 1.00
+   Proportion of alarms  M 1.00  N30 mean 0.80  N30 spread 0.17  N30 either 0.80  N10 mean 1.00  eye 0.33   | LR median 32.96, 95th percentile 43.86, negative 0.00
+   Parameter with the largest |z| on an M alarm: L side 0.28, k side 0.72  /  proportion with |z|>1.96: μ_L 0.92, σ_L 0.23, μ_k 1.00, σ_k 0.02
+   Alarms in the runs with all units at or above 75 %  M 1.00  N30 either 0.80  N10 mean 1.00
+
+M mixed T*=24 months (c=0.2059, fraction below R at 6 months 0.0000): 30-min values: 0 months mean 99.4, min 96.0 → 6 months mean 98.6, min 95.1 (median over runs 95.2); 10-min values: mean 36.1 → 21.4; runs with all 36 units at or above 75 %: 1.00
+   Proportion of alarms  M 0.68  N30 mean 0.22  N30 spread 0.02  N30 either 0.12  N10 mean 0.70  eye 0.00   | LR median 12.76, 95th percentile 23.12, negative 0.00
+   Parameter with the largest |z| on an M alarm: L side 0.27, k side 0.73  /  proportion with |z|>1.96: μ_L 0.37, σ_L 0.05, μ_k 0.71, σ_k 0.07
+   Alarms in the runs with all units at or above 75 %  M 0.68  N30 either 0.12  N10 mean 0.70
+
+M mixed T*=36 months (c=0.1373, fraction below R at 6 months 0.0000): 30-min values: 0 months mean 99.6, min 96.4 → 6 months mean 98.9, min 95.5 (median over runs 95.9); 10-min values: mean 37.9 → 26.3; runs with all 36 units at or above 75 %: 1.00
+   Proportion of alarms  M 0.48  N30 mean 0.20  N30 spread 0.00  N30 either 0.08  N10 mean 0.53  eye 0.03   | LR median 9.03, 95th percentile 19.44, negative 0.00
+   Parameter with the largest |z| on an M alarm: L side 0.31, k side 0.69  /  proportion with |z|>1.96: μ_L 0.34, σ_L 0.21, μ_k 0.59, σ_k 0.17
+   Alarms in the runs with all units at or above 75 %  M 0.48  N30 either 0.08  N10 mean 0.53
+

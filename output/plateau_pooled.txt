@@ -1,0 +1,19 @@
+40 tests each. median |log ratio| / within 2x / below half
+true D_max 95, S slow release, linear: true probability of failing [Int. 1, 2] 12 months [0.000, 0.019], 15 months [0.002, 0.602], true median k at 12 months 0.107
+   fitted with D_max=100.0: @12 Int. 1 0.00/1.00/0.00  @12 Int. 2 1.26/0.25/0.65  @15 Int. 1 1.11/0.28/0.53  @15 Int. 2 0.48/0.57/0.42  median estimated k@12 0.095
+   fitted with D_max= 95.0: @12 Int. 1 0.00/1.00/0.00  @12 Int. 2 1.08/0.33/0.40  @15 Int. 1 1.20/0.28/0.30  @15 Int. 2 0.24/0.82/0.17  median estimated k@12 0.108
+true D_max 95, O spread opening, linear: true probability of failing [Int. 1, 2] 12 months [0.129, 0.018], 15 months [0.561, 0.291], true median k at 12 months 0.250
+   fitted with D_max=100.0: @12 Int. 1 0.77/0.45/0.53  @12 Int. 2 1.08/0.33/0.47  @15 Int. 1 0.39/0.65/0.35  @15 Int. 2 0.48/0.62/0.35  median estimated k@12 0.181
+   fitted with D_max= 95.0: @12 Int. 1 0.62/0.55/0.35  @12 Int. 2 1.06/0.28/0.45  @15 Int. 1 0.23/0.78/0.23  @15 Int. 2 0.42/0.70/0.25  median estimated k@12 0.245
+true D_max 95, M mixed, linear: true probability of failing [Int. 1, 2] 12 months [0.009, 0.019], 15 months [0.169, 0.487], true median k at 12 months 0.138
+   fitted with D_max=100.0: @12 Int. 1 1.26/0.33/0.62  @12 Int. 2 1.14/0.23/0.57  @15 Int. 1 1.42/0.28/0.68  @15 Int. 2 0.61/0.53/0.47  median estimated k@12 0.118
+   fitted with D_max= 95.0: @12 Int. 1 0.85/0.35/0.38  @12 Int. 2 1.19/0.35/0.38  @15 Int. 1 0.62/0.53/0.25  @15 Int. 2 0.43/0.72/0.28  median estimated k@12 0.140
+true D_max 90, S slow release, linear: true probability of failing [Int. 1, 2] 12 months [0.000, 0.019], 15 months [0.000, 0.489], true median k at 12 months 0.123
+   fitted with D_max=100.0: @12 Int. 1 0.00/0.97/0.00  @12 Int. 2 2.38/0.07/0.85  @15 Int. 1 0.34/0.93/0.00  @15 Int. 2 1.79/0.25/0.75  median estimated k@12 0.091
+   fitted with D_max= 90.0: @12 Int. 1 0.00/0.97/0.00  @12 Int. 2 1.00/0.38/0.40  @15 Int. 1 0.34/0.62/0.00  @15 Int. 2 0.35/0.82/0.17  median estimated k@12 0.122
+true D_max 90, O spread opening, linear: true probability of failing [Int. 1, 2] 12 months [0.101, 0.018], 15 months [0.503, 0.270], true median k at 12 months 0.250
+   fitted with D_max=100.0: @12 Int. 1 0.66/0.53/0.35  @12 Int. 2 1.39/0.28/0.33  @15 Int. 1 0.50/0.57/0.42  @15 Int. 2 0.77/0.45/0.38  median estimated k@12 0.144
+   fitted with D_max= 90.0: @12 Int. 1 0.73/0.45/0.33  @12 Int. 2 1.14/0.33/0.33  @15 Int. 1 0.32/0.78/0.23  @15 Int. 2 0.54/0.55/0.28  median estimated k@12 0.248
+true D_max 90, M mixed, linear: true probability of failing [Int. 1, 2] 12 months [0.004, 0.018], 15 months [0.084, 0.419], true median k at 12 months 0.150
+   fitted with D_max=100.0: @12 Int. 1 1.60/0.20/0.57  @12 Int. 2 1.23/0.25/0.53  @15 Int. 1 2.86/0.28/0.65  @15 Int. 2 0.77/0.50/0.50  median estimated k@12 0.105
+   fitted with D_max= 90.0: @12 Int. 1 1.44/0.25/0.45  @12 Int. 2 1.35/0.30/0.28  @15 Int. 1 1.36/0.25/0.38  @15 Int. 2 0.50/0.78/0.15  median estimated k@12 0.148

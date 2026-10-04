@@ -1,0 +1,47 @@
+Specification (nominal): 30 min, R = 75 %; Interpretation 1: Q = 70
+
+1. Critical threshold depth δ*(ε) = ε + z_{1-ε}√(ε(1-ε)) (κ → 0), and the position of the sign change for κ > 0 (numerical)
+   ε       δ*(κ→0)   κ=0.02    κ=0.05    κ=0.10
+  0.005     0.187     0.194     0.227     0.313
+  0.010     0.241     0.246     0.269     0.335
+  0.020     0.308     0.310     0.325     0.372
+  0.030     0.351     0.353     0.364     0.400
+  0.050     0.408     0.410     0.417     0.443
+  0.100     0.484     0.485     0.489     0.503
+  0.200     0.537     0.537     0.539     0.545
+   Reference: with a = 0 and m = 98, the limit R = 75 has δ_R = 0.235, Q - 15 = 55 has δ = 0.439, Q - 25 = 45 has δ = 0.541
+
+3. Probability of failing Interpretation 1: simulation, four-class expression, limit 1 - (1 - ε)^6 (ε = fraction below Q - 25)
+   type, p                simul.   four-class  limit     Interpretation 2: simul.  h(p_R)   (p_R = fraction below R)
+  S slow release 0.05   0.000    0.000     0.000          0.019   0.018
+  S slow release 0.10   0.000    0.000     0.000          0.102   0.103
+  S slow release 0.20   0.001    0.001     0.001          0.417   0.413
+  O spread opening 0.05   0.176    0.172     0.150          0.018   0.017
+  O spread opening 0.10   0.373    0.372     0.308          0.102   0.101
+  O spread opening 0.20   0.688    0.685     0.572          0.415   0.415
+  M mixed 0.05   0.031    0.030     0.024          0.017   0.018
+  M mixed 0.10   0.074    0.076     0.049          0.107   0.105
+  M mixed 0.20   0.192    0.190     0.099          0.417   0.413
+   Interpretation 2, two-point limit h(ε) and 200ε³: ε 0.01: 0.0002 / 0.0002, ε 0.03: 0.0044 / 0.0054, ε 0.05: 0.0179 / 0.0250
+
+4. Asymptotic form in Proposition 1: G = Φ(-(δ-ε)/√(ε(1-ε))) and the Mills-ratio approximation φ(x)/x (x = (δ-ε)/√(ε(1-ε)))
+   δ 0.45  ε 0.005: G = 1.404e-10, approximation 1.438e-10, ratio to the true fraction ε: G/ε = 2.81e-08
+   δ 0.45  ε 0.010: G = 4.886e-06, approximation 5.115e-06, ratio to the true fraction ε: G/ε = 4.89e-04
+   δ 0.45  ε 0.030: G = 6.907e-03, approximation 7.822e-03, ratio to the true fraction ε: G/ε = 2.30e-01
+   δ 0.55  ε 0.005: G = 5.514e-15, approximation 5.603e-15, ratio to the true fraction ε: G/ε = 1.10e-12
+   δ 0.55  ε 0.010: G = 2.862e-08, approximation 2.954e-08, ratio to the true fraction ε: G/ε = 2.86e-06
+   δ 0.55  ε 0.030: G = 1.151e-03, approximation 1.256e-03, ratio to the true fraction ε: G/ε = 3.84e-02
+
+2. Unit model: sign predicted from the two-point fit (ε, δ) against the simulated sign
+   Limit R: prediction correct in 164/164; deep threshold Q - 15: 163/163 (states with a difference below 20 % excluded)
+   Examples (the first 9 states fitted by two points; the slow-release states have no lower cluster and are excluded by ε < 0.002):  ε   δ_R   δ*   F(R)  G(R)  F(Q-15)  G(Q-15)
+    0.029  0.259  0.348  0.049  0.110  0.032  0.006
+    0.064  0.242  0.437  0.100  0.253  0.069  0.060
+    0.140  0.216  0.515  0.202  0.419  0.148  0.199
+    0.005  0.258  0.193  0.050  0.044  0.008  0.000
+    0.011  0.217  0.249  0.102  0.135  0.016  0.001
+    0.024  0.160  0.328  0.199  0.289  0.034  0.015
+    0.282  -0.042  0.542  0.672  0.728  0.336  0.432
+    0.093  0.232  0.477  0.142  0.330  0.099  0.116
+    0.035  0.257  0.369  0.057  0.136  0.038  0.012
+

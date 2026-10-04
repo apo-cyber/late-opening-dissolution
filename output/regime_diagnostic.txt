@@ -1,0 +1,24 @@
+Specification at 30 min: 75 % (Interpretation 1: Q = 70), 12 units, 150 pulls, time points (10.0, 20.0, 30.0)
+
+1. True probability of failing [Interpretation 1, Interpretation 2] by type, the normal calculation, and the true regime
+  S slow release p 0.05: median L   8.0 min, sigma_L 0.13, median k 0.102, sigma_k 0.28, below Q-25 0.000 | true [0.000, 0.018] normal [0.000, 0.005] -> single peak
+  S slow release p 0.10: median L   8.0 min, sigma_L 0.13, median k 0.092, sigma_k 0.28, below Q-25 0.000 | true [0.000, 0.102] normal [0.000, 0.072] -> single peak
+  S slow release p 0.20: median L   8.0 min, sigma_L 0.13, median k 0.081, sigma_k 0.28, below Q-25 0.000 | true [0.001, 0.417] normal [0.000, 0.425] -> single peak
+  O spread opening p 0.05: median L  11.6 min, sigma_L 0.45, median k 0.250, sigma_k 0.10, below Q-25 0.027 | true [0.174, 0.018] normal [0.009, 0.125] -> two-cluster
+  O spread opening p 0.10: median L  13.7 min, sigma_L 0.45, median k 0.250, sigma_k 0.10, below Q-25 0.059 | true [0.375, 0.102] normal [0.299, 0.578] -> two-cluster
+  O spread opening p 0.20: median L  16.7 min, sigma_L 0.45, median k 0.250, sigma_k 0.10, below Q-25 0.131 | true [0.685, 0.413] normal [0.881, 0.913] -> two-cluster
+  M mixed p 0.05: median L  11.5 min, sigma_L 0.30, median k 0.137, sigma_k 0.20, below Q-25 0.004 | true [0.031, 0.017] normal [0.000, 0.014] -> two-cluster
+  M mixed p 0.10: median L  12.1 min, sigma_L 0.30, median k 0.125, sigma_k 0.20, below Q-25 0.008 | true [0.077, 0.107] normal [0.000, 0.208] -> two-cluster
+  M mixed p 0.20: median L  12.9 min, sigma_L 0.30, median k 0.112, sigma_k 0.20, below Q-25 0.018 | true [0.193, 0.415] normal [0.021, 0.692] -> two-cluster
+
+2. Proportion of pulls declared two-cluster by each rule, and the error of the estimated probability of failing
+  type, p                 true regime  | D1 flag | D2a 30 min only | D2b 3 times | median |log ratio| Int. 1: normal / D2b | Int. 2: normal / D2b
+  S slow release p 0.05  single peak    |  0.00   |  0.26         |  0.11          |  0.04 / 0.04                     |  2.02 / 1.21
+  S slow release p 0.10  single peak    |  0.00   |  0.19         |  0.14          |  0.13 / 0.13                     |  1.28 / 1.07
+  S slow release p 0.20  single peak    |  0.01   |  0.24         |  0.07          |  0.74 / 0.74                     |  0.58 / 0.55
+  O spread opening p 0.05  two-cluster    |  0.29   |  0.52         |  0.85          |  5.17 / 0.83                     |  2.93 / 1.68
+  O spread opening p 0.10  two-cluster    |  0.46   |  0.62         |  0.89          |  4.22 / 0.58                     |  2.19 / 1.31
+  O spread opening p 0.20  two-cluster    |  0.79   |  0.59         |  0.69          |  0.33 / 0.26                     |  0.82 / 0.56
+  M mixed p 0.05  two-cluster    |  0.07   |  0.34         |  0.54          |  3.47 / 1.49                     |  2.91 / 1.63
+  M mixed p 0.10  two-cluster    |  0.07   |  0.40         |  0.69          |  4.35 / 1.03                     |  1.79 / 0.97
+  M mixed p 0.20  two-cluster    |  0.18   |  0.43         |  0.79          |  4.46 / 0.86                     |  0.62 / 0.48

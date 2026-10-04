@@ -1,0 +1,19 @@
+40 tests each (12 units, 10/20/30 min). median |log ratio| / within 2x / below half. β = 1 is the control (same shape as the unit model)
+β=1.0 S slow release p=0.05 (median L 8.0 min, median k 0.102) | Int. 1: true 0.000 model 0.00/0.85/0.00 normal 0.00/0.97/0.00 | Int. 2: true 0.018 model 1.84/0.20/0.42 normal 2.07/0.23/0.50
+β=1.0 S slow release p=0.10 (median L 8.0 min, median k 0.092) | Int. 1: true 0.000 model 0.14/0.72/0.00 normal 0.14/0.90/0.00 | Int. 2: true 0.104 model 1.12/0.30/0.38 normal 1.31/0.23/0.45
+β=1.0 O spread opening p=0.05 (median L 11.7 min, median k 0.250) | Int. 1: true 0.180 model 0.89/0.38/0.50 normal 5.20/0.03/0.75 | Int. 2: true 0.018 model 1.85/0.23/0.62 normal 2.97/0.03/0.70
+β=1.0 O spread opening p=0.10 (median L 13.7 min, median k 0.250) | Int. 1: true 0.380 model 0.52/0.70/0.28 normal 1.62/0.20/0.53 | Int. 2: true 0.105 model 1.14/0.28/0.40 normal 2.14/0.10/0.38
+β=1.0 M mixed p=0.05 (median L 11.5 min, median k 0.137) | Int. 1: true 0.032 model 1.43/0.23/0.47 normal 3.49/0.00/1.00 | Int. 2: true 0.018 model 1.42/0.15/0.47 normal 2.85/0.15/0.55
+β=1.0 M mixed p=0.10 (median L 12.1 min, median k 0.125) | Int. 1: true 0.075 model 1.08/0.28/0.50 normal 4.33/0.03/0.93 | Int. 2: true 0.104 model 0.92/0.30/0.45 normal 2.03/0.07/0.60
+β=1.5 S slow release p=0.05 (median L 8.0 min, median k 0.091) | Int. 1: true 0.001 model 0.68/0.53/0.23 normal 0.77/0.07/0.88 | Int. 2: true 0.018 model 1.59/0.23/0.42 normal 2.52/0.07/0.72
+β=1.5 S slow release p=0.10 (median L 8.0 min, median k 0.082) | Int. 1: true 0.006 model 1.26/0.28/0.50 normal 1.95/0.10/0.80 | Int. 2: true 0.103 model 1.12/0.35/0.35 normal 1.38/0.20/0.50
+β=1.5 O spread opening p=0.05 (median L 11.9 min, median k 0.250) | Int. 1: true 0.208 model 0.74/0.47/0.40 normal 5.34/0.00/0.62 | Int. 2: true 0.019 model 1.73/0.12/0.53 normal 2.98/0.03/0.60
+β=1.5 O spread opening p=0.10 (median L 14.1 min, median k 0.250) | Int. 1: true 0.414 model 0.51/0.72/0.25 normal 0.84/0.40/0.38 | Int. 2: true 0.106 model 1.24/0.30/0.45 normal 2.17/0.03/0.35
+β=1.5 M mixed p=0.05 (median L 11.9 min, median k 0.129) | Int. 1: true 0.069 model 1.02/0.28/0.42 normal 4.25/0.10/0.85 | Int. 2: true 0.019 model 1.56/0.17/0.47 normal 2.90/0.05/0.62
+β=1.5 M mixed p=0.10 (median L 12.6 min, median k 0.117) | Int. 1: true 0.162 model 1.03/0.35/0.45 normal 4.69/0.07/0.72 | Int. 2: true 0.106 model 1.26/0.30/0.45 normal 2.06/0.17/0.42
+β=2.0 S slow release p=0.05 (median L 8.0 min, median k 0.086) | Int. 1: true 0.007 model 0.82/0.45/0.30 normal 2.10/0.03/0.93 | Int. 2: true 0.018 model 1.73/0.28/0.40 normal 2.23/0.17/0.57
+β=2.0 S slow release p=0.10 (median L 8.0 min, median k 0.077) | Int. 1: true 0.029 model 1.12/0.33/0.40 normal 3.16/0.07/0.82 | Int. 2: true 0.103 model 1.33/0.33/0.40 normal 1.56/0.28/0.42
+β=2.0 O spread opening p=0.05 (median L 12.1 min, median k 0.250) | Int. 1: true 0.225 model 1.31/0.33/0.62 normal 5.42/0.10/0.72 | Int. 2: true 0.019 model 2.58/0.23/0.68 normal 2.98/0.03/0.65
+β=2.0 O spread opening p=0.10 (median L 14.2 min, median k 0.250) | Int. 1: true 0.431 model 0.55/0.57/0.42 normal 0.81/0.40/0.47 | Int. 2: true 0.105 model 1.40/0.28/0.57 normal 2.16/0.03/0.45
+β=2.0 M mixed p=0.05 (median L 12.1 min, median k 0.126) | Int. 1: true 0.103 model 0.89/0.47/0.47 normal 4.64/0.05/0.90 | Int. 2: true 0.019 model 1.37/0.30/0.55 normal 2.99/0.07/0.70
+β=2.0 M mixed p=0.10 (median L 12.8 min, median k 0.114) | Int. 1: true 0.229 model 0.85/0.45/0.40 normal 5.01/0.07/0.75 | Int. 2: true 0.104 model 1.19/0.28/0.50 normal 2.07/0.10/0.47

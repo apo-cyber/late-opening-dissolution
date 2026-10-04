@@ -1,0 +1,10 @@
+40 tests each (12 units, 10/20/30 min). median |log ratio| / within 2x / below half. π = 0 is the control
+S slow release π=0.00 (fraction below R 0.051) | Int. 1: true 0.000 model 0.02/0.82/0.00 normal 0.02/0.93/0.00 | Int. 2: true 0.019 model 1.39/0.25/0.35 normal 1.73/0.12/0.57
+S slow release π=0.03 (fraction below R 0.079) | Int. 1: true 0.202 model 5.26/0.15/0.65 normal 5.31/0.17/0.65 | Int. 2: true 0.057 model 2.45/0.17/0.42 normal 2.70/0.07/0.55
+S slow release π=0.10 (fraction below R 0.146) | Int. 1: true 0.534 model 0.54/0.60/0.40 normal 0.56/0.57/0.42 | Int. 2: true 0.232 model 1.38/0.03/0.30 normal 1.41/0.00/0.30
+O spread opening π=0.00 (fraction below R 0.049) | Int. 1: true 0.174 model 0.76/0.42/0.33 normal 5.17/0.05/0.75 | Int. 2: true 0.017 model 1.59/0.15/0.42 normal 2.89/0.03/0.65
+O spread opening π=0.03 (fraction below R 0.078) | Int. 1: true 0.326 model 0.71/0.47/0.45 normal 5.77/0.10/0.65 | Int. 2: true 0.057 model 1.91/0.15/0.55 normal 3.41/0.00/0.57
+O spread opening π=0.10 (fraction below R 0.144) | Int. 1: true 0.587 model 0.31/0.80/0.20 normal 0.47/0.68/0.33 | Int. 2: true 0.228 model 0.88/0.42/0.25 normal 1.30/0.12/0.10
+M mixed π=0.00 (fraction below R 0.050) | Int. 1: true 0.031 model 1.42/0.15/0.53 normal 3.48/0.00/0.90 | Int. 2: true 0.018 model 1.68/0.17/0.42 normal 2.88/0.07/0.60
+M mixed π=0.03 (fraction below R 0.079) | Int. 1: true 0.229 model 1.29/0.30/0.57 normal 5.23/0.25/0.62 | Int. 2: true 0.058 model 1.88/0.23/0.38 normal 2.56/0.12/0.40
+M mixed π=0.10 (fraction below R 0.145) | Int. 1: true 0.546 model 0.56/0.62/0.38 normal 0.55/0.62/0.38 | Int. 2: true 0.229 model 1.33/0.12/0.33 normal 1.36/0.03/0.23

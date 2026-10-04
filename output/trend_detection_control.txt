@@ -1,0 +1,6 @@
+Pulls at [0, 3, 6] months, 12 units each. Control 200 runs, the others 60 runs each. Specification at 30 min: 75 %. Significance level 5 % (M: χ²₄ 9.488)
+No change (control): 30-min values: 0 months mean 99.5, min 96.2 → 6 months mean 99.5, min 96.0 (median over runs 96.1); 10-min values: mean 36.9 → 36.2; runs with all 36 units at or above 75 %: 1.00
+   Proportion of alarms  M 0.07  N30 mean 0.04  N30 spread 0.04  N30 either 0.03  N10 mean 0.07  eye 0.00   | LR median 4.01, 95th percentile 10.05, negative 0.00
+   Parameter with the largest |z| on an M alarm: L side 0.62, k side 0.38  /  proportion with |z|>1.96: μ_L 0.15, σ_L 0.46, μ_k 0.38, σ_k 0.15
+   Alarms in the runs with all units at or above 75 %  M 0.07  N30 either 0.03  N10 mean 0.07
+

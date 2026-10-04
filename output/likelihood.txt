@@ -1,0 +1,4 @@
+  spread opening, 10, 20, 30 min: n200: true   61.13 fitted   59.63 | n400: true   61.43 fitted   59.56 | n800: true   61.37 fitted   59.58
+  spread opening, 30 min only: n200: true   20.85 fitted   19.51 | n400: true   21.15 fitted   20.54 | n800: true   21.09 fitted   20.07
+  slow release, 10, 20, 30 min: n200: true   47.25 fitted   42.51 | n400: true   47.25 fitted   42.51 | n800: true   47.25 fitted   42.51
+  slow release, 30 min only: n200: true   23.96 fitted   21.86 | n400: true   23.96 fitted   21.86 | n800: true   23.96 fitted   21.86

@@ -1,0 +1,50 @@
+50 simulated studies. Thresholds fixed in advance: D > ln 2 (a 2-fold disagreement), LR_last > 95 % point of χ²₄ (9.49), LR_free > χ²₁₂ (21.03), LR_quad > χ²₄ (9.49)
+
+1. Alarm rate (linear = false alarm / accelerating = detection), detection at the threshold giving 10 % false alarms on the linear path, and AUC (linear vs accelerating)
+  S slow release
+    D1       median lin   0.00 acc   0.00 | fixed threshold: false alarm 0.02 detection 0.08 | threshold for 10 % false alarms   0.26: detection 0.12 | AUC 0.52
+    D2       median lin   0.98 acc   1.58 | fixed threshold: false alarm 0.64 detection 0.66 | threshold for 10 % false alarms   1.70: detection 0.44 | AUC 0.64
+    D        median lin   0.98 acc   1.58 | fixed threshold: false alarm 0.66 detection 0.66 | threshold for 10 % false alarms   1.70: detection 0.44 | AUC 0.64
+    LR_last  median lin   2.24 acc   6.21 | fixed threshold: false alarm 0.00 detection 0.32 | threshold for 10 % false alarms   4.08: detection 0.76 | AUC 0.91
+    LR_free  median lin  12.99 acc  27.73 | fixed threshold: false alarm 0.08 detection 0.80 | threshold for 10 % false alarms  19.02: detection 0.92 | AUC 0.96
+    LR_quad  median lin   3.65 acc  20.51 | fixed threshold: false alarm 0.02 detection 0.94 | threshold for 10 % false alarms   6.73: detection 0.96 | AUC 0.99
+  O spread opening
+    D1       median lin   0.58 acc   1.16 | fixed threshold: false alarm 0.40 detection 0.74 | threshold for 10 % false alarms   1.54: detection 0.30 | AUC 0.69
+    D2       median lin   0.77 acc   1.42 | fixed threshold: false alarm 0.54 detection 0.66 | threshold for 10 % false alarms   1.90: detection 0.40 | AUC 0.62
+    D        median lin   0.94 acc   1.80 | fixed threshold: false alarm 0.56 detection 0.78 | threshold for 10 % false alarms   2.31: detection 0.30 | AUC 0.67
+    LR_last  median lin   1.00 acc   1.74 | fixed threshold: false alarm 0.00 detection 0.00 | threshold for 10 % false alarms   2.96: detection 0.28 | AUC 0.60
+    LR_free  median lin  10.49 acc  14.93 | fixed threshold: false alarm 0.00 detection 0.24 | threshold for 10 % false alarms  17.07: detection 0.44 | AUC 0.72
+    LR_quad  median lin   4.43 acc   8.96 | fixed threshold: false alarm 0.16 detection 0.48 | threshold for 10 % false alarms  12.18: detection 0.32 | AUC 0.74
+  M mixed
+    D1       median lin   0.58 acc   1.00 | fixed threshold: false alarm 0.44 detection 0.58 | threshold for 10 % false alarms   1.89: detection 0.16 | AUC 0.59
+    D2       median lin   0.88 acc   1.50 | fixed threshold: false alarm 0.62 detection 0.76 | threshold for 10 % false alarms   2.46: detection 0.30 | AUC 0.65
+    D        median lin   0.98 acc   1.60 | fixed threshold: false alarm 0.66 detection 0.80 | threshold for 10 % false alarms   2.46: detection 0.30 | AUC 0.66
+    LR_last  median lin   1.78 acc   5.07 | fixed threshold: false alarm 0.00 detection 0.10 | threshold for 10 % false alarms   4.93: detection 0.52 | AUC 0.83
+    LR_free  median lin  12.54 acc  26.50 | fixed threshold: false alarm 0.06 detection 0.74 | threshold for 10 % false alarms  18.33: detection 0.80 | AUC 0.91
+    LR_quad  median lin   3.94 acc  17.33 | fixed threshold: false alarm 0.08 detection 0.82 | threshold for 10 % false alarms   7.67: detection 0.90 | AUC 0.96
+
+2. Estimate at 12 months (median |log ratio| [Interpretation 1, 2]): M5 throughout / M1 throughout / switch to M1 on an alarm (D > ln 2, LR_quad > χ²₄) / deg-2 (quadratic fit)
+  lin, S slow release: true [0.000, 0.019]  M5 [0.00, 1.27]  M1 [0.00, 1.72]  switch(D) [0.00, 1.71]  switch(LR_quad) [0.00, 1.27]  deg-2 [0.00, 1.45]
+  lin, O spread opening: true [0.150, 0.018]  M5 [0.47, 0.93]  M1 [0.92, 1.52]  switch(D) [0.84, 1.51]  switch(LR_quad) [0.59, 1.06]  deg-2 [0.81, 1.54]
+  lin, M mixed: true [0.015, 0.019]  M5 [1.14, 1.10]  M1 [1.66, 1.71]  switch(D) [1.58, 1.72]  switch(LR_quad) [1.22, 1.13]  deg-2 [1.58, 1.38]
+  acc, S slow release: true [0.000, 0.019]  M5 [0.00, 2.37]  M1 [0.00, 1.76]  switch(D) [0.00, 1.76]  switch(LR_quad) [0.00, 1.76]  deg-2 [0.00, 1.47]
+  acc, O spread opening: true [0.148, 0.018]  M5 [1.84, 2.73]  M1 [0.88, 1.74]  switch(D) [0.88, 1.74]  switch(LR_quad) [1.27, 2.29]  deg-2 [0.87, 1.60]
+  acc, M mixed: true [0.016, 0.019]  M5 [1.93, 2.70]  M1 [1.65, 1.64]  switch(D) [1.73, 1.64]  switch(LR_quad) [1.73, 1.74]  deg-2 [1.42, 1.42]
+
+3. Prediction at 15 months: linear M5 and deg-2 (quadratic) M5q (median |log ratio| / within 2x / below half, [Interpretation 1 | Interpretation 2])
+  lin, S slow release: true [0.008, 0.688]  M5 1.75 / 0.18 / 0.48 | 0.21 / 0.92 / 0.08   M5q 2.15 / 0.08 / 0.52 | 0.32 / 0.72 / 0.28
+  lin, O spread opening: true [0.593, 0.301]  M5 0.19 / 0.90 / 0.10 | 0.40 / 0.76 / 0.24   M5q 0.46 / 0.70 / 0.30 | 1.05 / 0.32 / 0.32
+  lin, M mixed: true [0.265, 0.535]  M5 0.70 / 0.50 / 0.26 | 0.27 / 0.92 / 0.08   M5q 1.19 / 0.26 / 0.30 | 0.55 / 0.72 / 0.28
+  acc, S slow release: true [0.765, 0.996]  M5 4.65 / 0.12 / 0.88 | 1.26 / 0.24 / 0.76   M5q 0.26 / 0.76 / 0.24 | 0.00 / 1.00 / 0.00
+  acc, O spread opening: true [0.909, 0.803]  M5 1.40 / 0.26 / 0.74 | 2.87 / 0.00 / 1.00   M5q 0.08 / 0.94 / 0.06 | 0.19 / 0.78 / 0.22
+  acc, M mixed: true [0.920, 0.988]  M5 2.86 / 0.04 / 0.96 | 1.88 / 0.10 / 0.90   M5q 0.08 / 0.94 / 0.06 | 0.01 / 1.00 / 0.00
+
+4. Test-then-choose rule: if LR_quad > χ²₄, the deg-2 (quadratic) M5q, otherwise the linear M5, predicts 15 months (median |log ratio| / within 2x / below half)
+  lin, S slow release: alarm 0.02  rule 1.75 / 0.18 / 0.48 | 0.21 / 0.92 / 0.08
+  lin, O spread opening: alarm 0.16  rule 0.24 / 0.86 / 0.14 | 0.51 / 0.60 / 0.28
+  lin, M mixed: alarm 0.08  rule 0.77 / 0.46 / 0.30 | 0.31 / 0.88 / 0.12
+  acc, S slow release: alarm 0.94  rule 0.26 / 0.74 / 0.26 | 0.00 / 0.94 / 0.06
+  acc, O spread opening: alarm 0.48  rule 0.42 / 0.60 / 0.40 | 1.05 / 0.44 / 0.56
+  acc, M mixed: alarm 0.82  rule 0.08 / 0.84 / 0.16 | 0.01 / 0.82 / 0.18
+
+Check: M1@12 and M5@12 use the same random stream as pooled_pulls.txt, so their median |log ratio| should agree with it (O spread opening, Interpretation 1: linear 0.94 / 0.60, accelerating 0.88 / 1.76)

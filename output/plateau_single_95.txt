@@ -1,0 +1,11 @@
+40 tests per state (1 pull of 12 units, 10/20/30 min). True plateau D_max = 95 %; states calibrated under D_max = 95 to p ≈ 0.10.
+S slow release p=0.10 true [0.000, 0.101]  true median k 0.103
+   fitted with D_max=100.0: median |log ratio| [Int. 1 0.05, Int. 2 0.95]  median estimated k 0.087
+   fitted with D_max= 95.0: median |log ratio| [Int. 1 0.06, Int. 2 1.00]  median estimated k 0.100
+O spread opening p=0.10 true [0.350, 0.102]  true median k 0.250
+   fitted with D_max=100.0: median |log ratio| [Int. 1 0.63, Int. 2 1.24]  median estimated k 0.181
+   fitted with D_max= 95.0: median |log ratio| [Int. 1 0.66, Int. 2 1.41]  median estimated k 0.245
+M mixed p=0.10 true [0.052, 0.103]  true median k 0.134
+   fitted with D_max=100.0: median |log ratio| [Int. 1 1.58, Int. 2 0.97]  median estimated k 0.111
+   fitted with D_max= 95.0: median |log ratio| [Int. 1 1.48, Int. 2 0.83]  median estimated k 0.133
+(Run time about 5 min. With 40 tests, differences of 0.1–0.2 in |log ratio| are within simulation error)
