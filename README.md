@@ -26,7 +26,7 @@ normal calculation from the mean and standard deviation.
 | `crack_not_widening.py` | SI S6 | A small fraction of units whose crack does not widen, added to each ageing type |
 | `trend_detection.py` | SI S7 | Pulls at 0, 3 and 6 months while all units pass: the test of no change (pooled linear against constant), regressions of the 30-min and 10-min values on time, and which parameter moved |
 | `nagase1976.py`, `nakai1974.py` | Published data and published lots, Figure 4 | Curves of four tablets digitised from Figure 8 of Nagase et al. (1976) and the summary statistics of Nakai et al. (1974); fits and probabilities of failing |
-| `figures.py`, `graphical_abstract.py` | Figures 1–4, graphical abstract | Figures (PNG, written to `../figures` or `$PAPERE_FIG_DIR`; the exported copy keeps them in `figures/`) |
+| `figures.py`, `graphical_abstract.py`, `graphical_abstract_ddip.py` | Figures 1–4, graphical abstract (full size; 525 pixels wide for the journal) | Figures (PNG, written to `../figures` or `$PAPERE_FIG_DIR`; the exported copy keeps them in `figures/`) |
 
 ## Run
 

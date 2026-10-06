@@ -19,6 +19,7 @@ $PY nagase1976.py           > output/nagase1976.txt           # Published lots: 
 $PY nakai1974.py            > output/nakai1974.txt            # Published lots: Nakai et al. (1974)
 $PY figures.py                                                # Figures 1-4 (written to $PAPERE_FIG_DIR)
 $PY graphical_abstract.py                                     # graphical abstract
+$PY graphical_abstract_ddip.py                                # graphical abstract at 525 px (Drug Dev Ind Pharm)
 if [ "${ONLY_FAST:-0}" = "1" ]; then echo "done (fast scripts only)"; exit 0; fi
 $PY regime_diagnostic.py    > output/regime_diagnostic.txt    # Tables 1, 2 and 5 (types, true vs normal, diagnosis at one pull) (hours)
 $PY pooled_pulls.py         > output/pooled_pulls.txt         # Table 6 (forecasts across pulls) (hours)
