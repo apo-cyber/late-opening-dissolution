@@ -52,7 +52,7 @@ P(pass) = pA⁶ + [(pA + pB)¹² − pA⁶(pA + pB)⁶] + Σ_{(c₁,c₂,c₃)} 
 
 where b_n(c) = C(n, c) pC^c (pA + pB)^{n−c}, w(c₁) = b₆(c₁) for c₁ ≥ 1, w(0) = (pA + pB)⁶ − pA⁶, and the sum runs over the triples with c₁ + c₂ ≥ 1 and c₁ + c₂ + c₃ ≤ 2 (c₁, c₂, c₃ are the numbers of class-C units among units 1–6, 7–12 and 13–24; any class-D unit makes S3 fail). The first term is passing at S1, the second failing S1 and passing S2, the third failing S2 and passing S3.
 
-**Meaning**: the whole error of the normal calculation comes from misestimating the two deep classes (pC, pD). By Proposition 1, for a two-cluster lot the normal calculation underestimates pC and pD by orders of magnitude.
+**Meaning**: a lot with no units in the two deep classes always passes (with pC = pD = 0, pA + pB = 1 and the expression is pA⁶ + 1 − pA⁶ = 1). When pC > 0, P(pass) also depends on how the rest of the mass is split between classes A and B, through pA⁶ and w(0) (for example, with pC = 0.01 and pD = 0, P(pass) is 0.99893 for pA = 0.98 and 0.99846 for pA = 0.50). The error of the normal calculation therefore comes mainly, not entirely, from misestimating the two deep classes (pC, pD). (Version 1.0.1 said "the whole error"; corrected in 1.0.2.) By Proposition 1, for a two-cluster lot the normal calculation underestimates pC and pD by orders of magnitude.
 
 ## Numerical checks (`output/sign_rule.txt`)
 

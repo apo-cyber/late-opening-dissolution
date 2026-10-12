@@ -48,6 +48,11 @@ eye from Figure 8 (lower panel) of Nagase I, Fujishiro T, Okamoto T, Nakajima S.
 standard deviations of the time to complete dissolution reported in Table III of Nakai Y, Nakajima S, Kakizawa H.
 *Chem Pharm Bull* 1974;22:2910–2915 (https://doi.org/10.1248/cpb.22.2910). The articles themselves are not redistributed.
 
+## Versions
+
+- 1.0.2 (2026-10-12): `sign_rule.md`, corollary (four-class expression): the error of the normal calculation comes *mainly*, not entirely, from the two deep classes; a lot with none in them always passes, but with units in class C the split between classes A and B also matters (worked example added). Graphical abstract at 525 pixels wide (`graphical_abstract_ddip.py`, `figures/ddip/`). No script output changed.
+- 1.0.1 (2026-10-04): first archived version.
+
 ## Licence and citation
 
 MIT licence (see `LICENSE`). Please cite the paper and the Zenodo archive of this repository (`CITATION.cff`).
