@@ -50,7 +50,7 @@ standard deviations of the time to complete dissolution reported in Table III of
 
 ## Versions
 
-- 1.0.2 (2026-10-12): `sign_rule.md`, corollary (four-class expression): the error of the normal calculation comes *mainly*, not entirely, from the two deep classes; a lot with none in them always passes, but with units in class C the split between classes A and B also matters (worked example added). Graphical abstract at 525 pixels wide (`graphical_abstract_ddip.py`, `figures/ddip/`). No script output changed.
+- 1.0.2 (2026-10-16): `sign_rule.md`, corollary (four-class expression): the error of the normal calculation comes *mainly*, not entirely, from the two deep classes; a lot with none in them always passes, but with units in class C the split between classes A and B also matters (worked example added). Graphical abstract at 525 pixels wide (`graphical_abstract_ddip.py`, `figures/ddip/`). No script output changed.
 - 1.0.1 (2026-10-04): first archived version.
 
 ## Licence and citation
