@@ -15,11 +15,11 @@ normal calculation from the mean and standard deviation.
 | Script | Paper | What it does |
 |---|---|---|
 | `likelihood.py` | Methods (estimation), SI S3 | Unit model; likelihood of per-vessel values integrated on local grids, with analytical gradient; maximum-likelihood fits for one pull and for pooled pulls (parameters linear in time). Run alone, it refines the grid and prints the change in the likelihood and in the fit |
-| `regime_diagnostic.py` | Tables 1, 2 and 5 | Ageing types (slow release, spread opening, mixed) at three degrees of ageing; true and normal probabilities of failing both procedures; diagnosis of the regime from 12 units of one pull (simple flag, model with 30-min values only, model with 10, 20 and 30 min) and error of the estimated probability of failing |
-| `single_peak_controls.py`, `skew_baseline.py` | Table 3 | Other single-peak distributions matched to the unit values (lognormal, reflected lognormal, skew-normal) |
+| `regime_diagnostic.py` | Tables 1, 2 and 4 | Ageing types (slow release, spread opening, mixed) at three degrees of ageing; true and normal probabilities of failing both procedures; diagnosis of the regime from 12 units of one pull (simple flag, model with 30-min values only, model with 10, 20 and 30 min) and error of the estimated probability of failing |
+| `single_peak_controls.py`, `skew_baseline.py` | SI S8 (Table S4) | Other single-peak distributions matched to the unit values (lognormal, reflected lognormal, skew-normal) |
 | `sign_rule.py`, `sign_rule.md` | Direction of the error; SI S4 | Two-point limit: threshold depth, the sign rule and the four-class expression for Interpretation 1 (derivation in `sign_rule.md`), checked on the states of the unit model |
-| `equal_quality.py` | Table 4, Figure 3 | Probability of passing for lots of equal quality (fraction of units below $Q$) and different shapes |
-| `pooled_pulls.py` | Table 6 | Forecasts of the probability of failing at 12 and 15 months from pulls at 0–12 months: normal trend versus the pooled unit model |
+| `equal_quality.py` | Table 3, Figure 3 | Probability of passing for lots of equal quality (fraction of units below $Q$) and different shapes |
+| `pooled_pulls.py` | Table 5 | Forecasts of the probability of failing at 12 and 15 months from pulls at 0–12 months: normal trend versus the pooled unit model |
 | `form_test.py`, `form_test_control.py`, `form_test_restart.py` | SI S1 | Likelihood-ratio test of the form of the path (quadratic against linear), the rule that switches to the quadratic forecast, two further forms of acceleration, and the same fits repeated from more starting values |
 | `plateau_single.py`, `plateau_pooled.py` | SI S2 | Plateau of 95 % or 90 % fitted with $D_{\max}$ = 100 % or the true value, from one pull and from pooled pulls |
 | `gradual_start.py` | SI S5 | Units whose release starts gradually (Weibull shape 1.5 and 2) fitted with the unit model |
@@ -33,8 +33,8 @@ normal calculation from the mean and standard deviation.
 ```bash
 python3 -m venv .venv && . .venv/bin/activate
 pip install -r requirements.txt
-ONLY_FAST=1 ./run_all.sh   # a few minutes: Tables 3 and 4, the sign rule, the published lots, the figures
-./run_all.sh               # everything; the simulations of Tables 1, 2, 5, 6 and SI S1, S2 and S5–S7 take hours each
+ONLY_FAST=1 ./run_all.sh   # a few minutes: Table 3, SI S8, the sign rule, the published lots, the figures
+./run_all.sh               # everything; the simulations of Tables 1, 2, 4, 5 and SI S1, S2 and S5–S7 take hours each
 ```
 
 The `.txt` files in `output/` are the runs used for the paper; the seeds are fixed in the scripts. The simulations use
@@ -50,6 +50,7 @@ standard deviations of the time to complete dissolution reported in Table III of
 
 ## Versions
 
+- 1.0.3 (2026-10-22): table numbers in this README and `run_all.sh` follow the resubmitted paper, in which the comparison with other single-peak distributions moved to the supplementary material (SI S8, Table S4; Tables 4–6 of the paper became Tables 3–5). No code or output changed.
 - 1.0.2 (2026-10-16): `sign_rule.md`, corollary (four-class expression): the error of the normal calculation comes *mainly*, not entirely, from the two deep classes; a lot with none in them always passes, but with units in class C the split between classes A and B also matters (worked example added). Graphical abstract at 525 pixels wide (`graphical_abstract_ddip.py`, `figures/ddip/`). No script output changed.
 - 1.0.1 (2026-10-04): first archived version.
 

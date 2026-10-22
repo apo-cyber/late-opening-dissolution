@@ -11,9 +11,9 @@ if [ -z "${PAPERE_FIG_DIR:-}" ]; then
 fi
 mkdir -p output
 $PY likelihood.py           > output/likelihood.txt           # SI S3: convergence of the local-grid likelihood
-$PY single_peak_controls.py > output/single_peak_controls.txt # Table 3 (other single-peak distributions)
-$PY skew_baseline.py        > output/skew_baseline.txt        # Table 3 (skew-normal baseline)
-$PY equal_quality.py        > output/equal_quality.txt        # Table 4, Figure 3 (lots of equal quality)
+$PY single_peak_controls.py > output/single_peak_controls.txt # SI S8, Table S4 (other single-peak distributions)
+$PY skew_baseline.py        > output/skew_baseline.txt        # SI S8 (skew-normal baseline)
+$PY equal_quality.py        > output/equal_quality.txt        # Table 3, Figure 3 (lots of equal quality)
 $PY sign_rule.py            > output/sign_rule.txt            # direction of the error (sign rule, four-class expression), SI S4
 $PY nagase1976.py           > output/nagase1976.txt           # Published lots: Nagase et al. (1976), Figure 4
 $PY nakai1974.py            > output/nakai1974.txt            # Published lots: Nakai et al. (1974)
@@ -21,8 +21,8 @@ $PY figures.py                                                # Figures 1-4 (wri
 $PY graphical_abstract.py                                     # graphical abstract
 $PY graphical_abstract_ddip.py                                # graphical abstract at 525 px (Drug Dev Ind Pharm)
 if [ "${ONLY_FAST:-0}" = "1" ]; then echo "done (fast scripts only)"; exit 0; fi
-$PY regime_diagnostic.py    > output/regime_diagnostic.txt    # Tables 1, 2 and 5 (types, true vs normal, diagnosis at one pull) (hours)
-$PY pooled_pulls.py         > output/pooled_pulls.txt         # Table 6 (forecasts across pulls) (hours)
+$PY regime_diagnostic.py    > output/regime_diagnostic.txt    # Tables 1, 2 and 4 (types, true vs normal, diagnosis at one pull) (hours)
+$PY pooled_pulls.py         > output/pooled_pulls.txt         # Table 5 (forecasts across pulls) (hours)
 $PY form_test.py            > output/form_test.txt            # SI S1: test of the form of the path (hours; writes output/form_test.pkl)
 $PY form_test_control.py    > output/form_test_control.txt    # SI S1: two further forms of acceleration (hours)
 $PY form_test_restart.py    > output/form_test_restart.txt    # SI S1: the same fits from more starting values (hours; reads output/form_test.pkl)
