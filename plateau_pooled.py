@@ -1,6 +1,6 @@
 """Plateau D_max below 100 %, pooled linear fit: how far off is the prediction of the probability of failing at 12 and
 15 months when the pooled linear fit is made with D_max fixed at 100 % for a product that levels off below 100 %?
-(Main text: limitations, plateau D_max; Supplementary Information.)
+(Main text: Results, "Forecasts", plateau D_max; Supplementary Section S2 in versions 1.0.1–1.0.3 of this code.)
 
 Same ageing paths (linear, p = 0.05 at 12 months) and pulls (0-12 months, 12 units each, 10/20/30 min) as
 pooled_pulls.py, regenerated under a true plateau TRUE_D (95 and 90) and fitted twice: with D_max fixed at 100 and with

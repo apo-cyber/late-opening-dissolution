@@ -1,5 +1,5 @@
 """Detecting the start of ageing while all units pass: from pulls at 0, 3 and 6 months that all meet the specification,
-how often can a trend that has begun be detected? (Supplementary Section S7.) All values are assumed; no measured data.
+how often can a trend that has begun be detected? (Not reported in the current main text; Supplementary Section S7 in versions 1.0.1–1.0.3 of this code.) All values are assumed; no measured data.
 
 Question: when the mean dissolution falls from 0 to 3 to 6 months, or when all units were near 90 % at 0 months and one
 unit at 6 months comes close to the lower limit, can the start of ageing be inferred although the specification is met?

@@ -1,5 +1,6 @@
 """Control: is the error of the normal calculation a general consequence of non-normality, or specific to two clusters?
-(main text: Results, "Other single-peak distributions" and its table).
+(main text: Results, "True and normal probabilities of failing", other single-peak families; Supplementary Section S8
+and Table S4 in version 1.0.3).
 
 For the nine states of the three ageing types (regime_diagnostic.make_types), the unit values at the specification time
 are compared with single-peak distributions having the same mean and SD, through the probability of failing the

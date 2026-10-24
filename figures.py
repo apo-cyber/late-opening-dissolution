@@ -1,4 +1,5 @@
-"""Figures 1-4 of the main text. Output: PNG files (300 dpi, white background, for print) in paper-E/figures/, or in the
+"""Figures 1-4 of the paper as numbered in versions 1.0.1–1.0.3 of this code (default style; the current version
+has Figures 1, 2 and 4 as Figures 1-3, drawn with PAPERE_FIG_STYLE=dt, and not Figure 3). Output: PNG files (300 dpi, white background, for print) in paper-E/figures/, or in the
 directory given by the environment variable PAPERE_FIG_DIR.
 
 Figure 1  Distribution of the per-unit values at the specification time (30 min): single peak (slow release) and two

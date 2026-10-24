@@ -1,6 +1,6 @@
 # Staged acceptance of opening-type products: the sign rule for the threshold depth and the four-class expression
 
-Propositions behind the section "The direction of the error" of the paper and Supplementary Section S4. The numerical checks are in `sign_rule.py`, with output in `output/sign_rule.txt`. Notation follows the paper: the individual limit R (Interpretation 2; equal to Q + 5 of stage S1) and Q (Interpretation 1).
+Propositions behind the section "The direction of the error" of the paper (Supplementary Section S4 in versions 1.0.1–1.0.3 of this code). The numerical checks are in `sign_rule.py`, with output in `output/sign_rule.txt`. Notation follows the paper: the individual limit R (Interpretation 2; equal to Q + 5 of stage S1) and Q (Interpretation 1).
 
 ## Setting: the two-point limit model
 

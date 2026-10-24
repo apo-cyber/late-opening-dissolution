@@ -1,5 +1,5 @@
 """Control for form_test.py: the test of form when the accelerating path is not quadratic.
-(main text: Section "Pooling the pulls", the test-then-choose rule; Supplementary material). All values are assumed.
+(main text: Results, "Forecasts", the switch to the quadratic forecast; Supplementary Section S1 in versions 1.0.1–1.0.3 of this code). All values are assumed.
 
 In form_test.py the accelerating path was exactly quadratic in parameter space (g = (tau/12)^2), so the quadratic fit
 had the right form and the rule "alarm on LR_quad -> predict with the quadratic fit" was favoured by construction. Here

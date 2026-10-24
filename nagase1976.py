@@ -1,5 +1,5 @@
 """Worked example on published per-unit data: the sugar-coated tablets of Nagase et al. (1976), which aged in the
-slow-release pattern (main text: "Published data" in Materials and Methods, "Published lots" in Results, Figure 4).
+slow-release pattern (main text: "Published data" in Methods, "Published lots" in Results, Figure 3; Figure 4 in versions 1.0.1–1.0.3).
 
 Source: Nagase I, Fujishiro T, Okamoto T, Nakajima S. Disintegration measurement of commercial sugar-coated tablets by
 thermal analysis. Japanese Journal of Hospital Pharmacy 1976;1(4):201-207, doi:10.5649/jjphcs1975.1.201 (in Japanese,

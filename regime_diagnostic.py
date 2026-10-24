@@ -1,7 +1,7 @@
 """Regime diagnosis at one pull: can the per-vessel values of 12 units tell a lot in which the normal calculation of
 the probability of failing is adequate (single peak) from one in which it is not (two clusters)? Also defines the three
 ageing types, the acceptance procedures and the normal calculation used by the other scripts (main text: Table 1,
-Section "Diagnosis at one pull" and its table). All values are assumed; no measured data.
+Results "True and normal probabilities of failing" and "Diagnosis at one pull", Table 2). All values are assumed; no measured data.
 
 Unit model as in likelihood.py, with D_max = 100 % and an analytical error of SD 2 %. Nominal specification (not taken
 from any product): 75 % at 30 min. Interpretation 1 (harmonized three-stage procedure) with Q = 70 (stage 1 at Q + 5 =

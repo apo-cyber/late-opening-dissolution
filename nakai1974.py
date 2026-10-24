@@ -1,5 +1,5 @@
 """Worked example from published summary statistics: the sugar-coated tablets of Nakai et al. (1974), whose opening times
-spread on storage, a public example of the two-cluster regime (main text: "Published data" in Materials and Methods,
+spread on storage, a public example of the two-cluster regime (main text: "Published data" in Methods,
 "Published lots" in Results).
 
 Source: Nakai Y, Nakajima S, Kakizawa H. Disintegration measurement of sugar coated tablets by thermal analysis.

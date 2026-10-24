@@ -1,5 +1,5 @@
-"""Comparison at equal quality, in the framework of Novick et al. 2009 (main text: Results, "Lots of equal quality",
-its table and figure).
+"""Comparison at equal quality, in the framework of Novick et al. 2009 (main text: Results, "Lots of equal quality";
+its table and figure were Table 3 and Figure 3 in versions 1.0.1–1.0.3 of this code and are not in the current version).
 
 Novick et al. 2009 (delivered-dose uniformity of inhalation products) compared the probability of acceptance between
 distributions with the same fraction outside the target interval (the same tail fraction), asking whether a lot of the

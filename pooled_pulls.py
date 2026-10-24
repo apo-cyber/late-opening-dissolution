@@ -1,5 +1,5 @@
 """Pooling the stability pulls: how much does fitting all pulls together improve the estimated probability of failing?
-(main text: Section "Pooling the pulls" and its table). All values are assumed; no measured data.
+(main text: Results, "Forecasts", Table 3; Table 5 in versions 1.0.1–1.0.3). All values are assumed; no measured data.
 
 At one pull of 12 units the probability of failing is known only to its order of magnitude (regime_diagnostic.py).
 Here the unit model is fitted to the pulls of a stability study (0, 3, 6, 9 and 12 months, 12 units each, values at

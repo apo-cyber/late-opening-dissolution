@@ -1,5 +1,5 @@
 """Numerical checks of the propositions behind the sign rule and the four-class expression (main text: Results,
-"The direction of the error"; Supplementary Section S4). The derivations are in sign_rule.md.
+"The direction of the error"; Supplementary Section S4 in versions 1.0.1–1.0.3 of this code). The derivations are in sign_rule.md.
 
 Two-point limit model: a unit value X lies, with probability ε, at a low value a (unit not opened), and with probability
 1 − ε in an upper cluster N(m, s²). Gap D = m − a, relative depth of a threshold c δ = (m − c)/D (0 < δ < 1), κ = s/D.

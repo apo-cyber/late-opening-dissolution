@@ -1,5 +1,5 @@
 """Plateau D_max below 100 %, one pull: how far off is the estimated probability of failing when the unit model is fitted
-with D_max fixed at 100 % instead of the true plateau? (Main text: limitations, plateau D_max; Supplementary Information.)
+with D_max fixed at 100 % instead of the true plateau? (Not reported in the main text, which gives the pooled result of plateau_pooled.py; Supplementary Section S2 in versions 1.0.1–1.0.3 of this code.)
 
 The product levels off at TRUE_D % (default 95; pass another value as the first argument, e.g. 90). The three ageing
 types (S slow release, O spread opening, M mixed) are recalibrated under the true plateau to the state with a fraction

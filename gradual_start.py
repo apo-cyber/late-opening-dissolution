@@ -1,6 +1,6 @@
 """Gradual start: when the release of a unit starts along an S-shaped curve, how far off is the probability of failing
-estimated by fitting the unit model (first-order from the moment the unit opens)? (Main text: Methods, one sentence on
-the Weibull shape; Supplementary Section S5.)
+estimated by fitting the unit model (first-order from the moment the unit opens)? (Main text: Discussion, limitations, one
+sentence on the Weibull shape; Supplementary Section S5 in versions 1.0.1–1.0.3 of this code.)
 
 A coat cracks and the crack widens gradually, so release may begin slowly (the crack stays narrow for a while). The true
 curve of one unit is

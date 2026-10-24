@@ -1,5 +1,5 @@
 """Robustness of the test of form (LR_quad) to the optimizer: the linear and quadratic fits are redone from more
-starting values (main text: Section "Pooling the pulls", the test of form and the test-then-choose rule). All values are
+starting values (main text: Results, "Forecasts"; Supplementary Section S1 in versions 1.0.1–1.0.3 of this code). All values are
 assumed.
 
 Why: the likelihood of the quadratic (and of the pooled linear) fit can have several local maxima, and the fit with

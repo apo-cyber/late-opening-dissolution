@@ -6,8 +6,8 @@ authors:
     given-names: Yasushi
     orcid: "https://orcid.org/0009-0005-7300-4234"
     affiliation: "Supply Chain Headquarters, Alfresa Pharma Corporation, Osaka, Japan"
-version: "1.0.3"
-date-released: "2026-10-22"
+version: "1.0.4"
+date-released: "2026-10-24"
 license: MIT
 repository-code: "https://github.com/apo-cyber/late-opening-dissolution"
-doi: "10.5281/zenodo.23135782"  # concept DOI (all versions); the version DOI of 1.0.3 is assigned by Zenodo on release
+doi: "10.5281/zenodo.23135782"  # concept DOI (all versions); the version DOI of 1.0.4 is assigned by Zenodo on release

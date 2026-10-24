@@ -11,7 +11,7 @@ rose from 16 to 160). For each unit we therefore locate, on a coarse grid over a
 likelihood G is within exp(-CUT) of its maximum, place a fine grid over that region and evaluate G once (it does not
 depend on theta). Each evaluation for a new theta only reweights those nodes by the normal densities and sums
 log sum_j G_ij phi_theta(node j) dA_j over units; the gradient is analytical. check_convergence() refines the grid
-and shows that the value at the true parameters and the fitted value do not change (Supplementary Section S3).
+and shows that the value at the true parameters and the fitted value do not change (main text: Methods, "Calculations"; Supplementary Section S3 in versions 1.0.1–1.0.3 of this code).
 """
 import numpy as np
 from scipy.optimize import minimize

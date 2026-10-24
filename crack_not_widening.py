@@ -1,6 +1,6 @@
 """Cracks that do not widen: when the slow units are a separate subpopulation rather than the lognormal tail, how far off
-is the probability of failing estimated by fitting the unit model (L and k both lognormal)? (Main text: limitations;
-Supplementary Section S6.)
+is the probability of failing estimated by fitting the unit model (L and k both lognormal)? (Main text: Discussion,
+limitations; Supplementary Section S6 in versions 1.0.1–1.0.3 of this code.)
 
 Interpretation 2 is decided by the one or two slow units among six (the tail of the distribution). If storage produces a
 fixed fraction of units whose crack stays narrow and does not widen, the tail can be heavier than the lognormal

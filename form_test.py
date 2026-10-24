@@ -1,5 +1,5 @@
 """Test of form: can a wrong (linear) form of the ageing path be detected from the pulls themselves?
-(main text: Section "Pooling the pulls", the test of form and the test-then-choose rule). All values are assumed.
+(main text: Results, "Forecasts", and Discussion, limitations; Supplementary Section S1 in versions 1.0.1–1.0.3 of this code). All values are assumed.
 
 In pooled_pulls.py the ranking of the 12-month estimates reversed with the form of the path (O spread opening,
 Interpretation 1, median |log ratio|: on the linear path the pooled M5 0.60 < last pull only M1 0.94; on the

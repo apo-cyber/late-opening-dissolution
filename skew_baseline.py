@@ -1,6 +1,7 @@
 """Stronger control: estimate the mean, SD and skewness from the 12 units of a single test, fit a reflected lognormal
 (matched up to the third moment) and compute the probability of failing. Does it come close to the unit model?
-(main text: Results, "Other single-peak distributions", last paragraph).
+(main text: Results, "True and normal probabilities of failing", the reflected lognormal fitted to one pull;
+Supplementary Section S8 in version 1.0.3).
 
 single_peak_controls.py showed that, given the true skewness, the reflected lognormal nearly recovers Interpretation 1
 for the mixed type. In practice only the sample skewness of 12 units is available, and it varies widely (the sample
