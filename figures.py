@@ -10,6 +10,11 @@ Figure 3  Probability of passing for lots of equal quality (the framework of Nov
 Figure 4  Published data: the values read from Nagase et al. (1976) for 4 tablets on opening and after 80 days, with
           the unit model fitted to each tablet.
 
+PAPERE_FIG_STYLE=dt draws Figures 1, 2 and 4 for Dissolution Technologies (about 5 inches wide, 14-point text,
+300 dpi; panels stacked vertically) into <figure dir>/dt/Figure1-3.png, numbered as in that version of the paper
+(Figure 3 there is Figure 4 here; the equal-quality figure is not drawn). The simulated values are the same: the
+random draws are made in the same order as in the default style.
+
 Colours are taken in order from a standard categorical palette (blue, orange, aqua, yellow, magenta). Types are
 distinguished by line style and direct labels as well as by colour. All values are assumed, except Figure 4, which
 shows values read from a published figure.
@@ -29,6 +34,9 @@ import nagase1976 as NG
 
 OUT = Path(os.environ.get("PAPERE_FIG_DIR", Path(__file__).resolve().parent.parent / "figures"))
 OUT.mkdir(exist_ok=True)
+DT = os.environ.get("PAPERE_FIG_STYLE") == "dt"
+if DT:
+    (OUT / "dt").mkdir(exist_ok=True)
 C = {"blue": "#2a78d6", "orange": "#eb6834", "aqua": "#1baf7a", "yellow": "#eda100", "magenta": "#e87ba4"}
 INK, INK2, MUTED, GRID = "#0b0b0b", "#52514e", "#8a8984", "#e4e3df"
 TYPES = [("S slow release", "Slow release", C["blue"]), ("O spread opening", "Spread opening", C["orange"]), ("M mixed", "Mixed", C["aqua"])]
@@ -41,6 +49,14 @@ plt.rcParams.update({
     "axes.grid": True, "grid.color": GRID, "grid.linewidth": 0.6, "lines.linewidth": 2.0,
     "legend.frameon": False, "savefig.dpi": 300, "figure.facecolor": "white",
 })
+if DT:
+    plt.rcParams.update({"font.size": 14, "axes.titlesize": 14, "axes.labelsize": 14, "xtick.labelsize": 14,
+                         "ytick.labelsize": 14, "legend.fontsize": 14, "lines.linewidth": 2.4})
+FS = 14 if DT else None   # every text element is 14 pt in the DT style
+
+
+def fs(default):
+    return FS or default
 
 
 def units(th, n):
@@ -50,7 +66,10 @@ def units(th, n):
 
 
 def fig1():
-    fig, axes = plt.subplots(1, 2, figsize=(6.6, 2.6), sharey=True)
+    if DT:
+        fig, axes = plt.subplots(2, 1, figsize=(5, 6.6), sharex=True)
+    else:
+        fig, axes = plt.subplots(1, 2, figsize=(6.6, 2.6), sharey=True)
     for ax, (kind, label, col) in zip(axes, TYPES[:2]):
         th = NF.solve(kind, 0.10)
         y = units(th, 400_000)
@@ -58,24 +77,31 @@ def fig1():
         ax.hist(y, bins=bins, density=True, color=col, alpha=0.85, edgecolor="white", linewidth=0.6)
         xs = np.linspace(-5, 110, 400)
         ax.plot(xs, norm.pdf(xs, y.mean(), y.std()), color=INK, lw=1.4, ls="--")
-        for x, t, ha in ((R2, "R", "center"), (Q1 - 15, "Q−15", "left"), (Q1 - 25, "Q−25", "right")):
+        for x, t, ha in ((R2, "R", "left" if DT else "center"), (Q1 - 15, "Q−15", "left"), (Q1 - 25, "Q−25", "right")):
             ax.axvline(x, color=INK2, lw=0.8, ls=":")
             ax.text(x + (1 if ha == "left" else -1 if ha == "right" else 0), 1.02, t, transform=ax.get_xaxis_transform(),
-                    ha=ha, va="bottom", fontsize=7.5, color=INK2)
+                    ha=ha, va="bottom", fontsize=fs(7.5), color=INK2)
         ax.set_yscale("log"); ax.set_ylim(1e-4, 0.3); ax.set_xlim(-5, 107)
-        ax.set_xlabel(f"Amount dissolved at {T_SPEC:.0f} min (% of label claim)")
-        ax.set_title(f"{label}  (p = 0.10)", loc="left", fontsize=9, color=INK, pad=14)
-        ax.text(0.03, 0.93, f"mean {y.mean():.1f}, SD {y.std():.1f}", transform=ax.transAxes, fontsize=7.5, color=INK2)
-    axes[0].set_ylabel("Density (log scale)")
-    axes[1].annotate("normal with\nthe same\nmean and SD", xy=(35, 9e-4), xytext=(7, 0.02), fontsize=7.5, color=INK,
-                     arrowprops=dict(arrowstyle="-", color=INK2, lw=0.7))
+        if not DT or ax is axes[-1]:
+            ax.set_xlabel(f"Amount dissolved at {T_SPEC:.0f} min (%)" if DT else f"Amount dissolved at {T_SPEC:.0f} min (% of label claim)")
+        ax.set_title(f"{label}  (p = 0.10)", loc="left", fontsize=fs(9), color=INK, pad=22 if DT else 14)
+        ax.text(0.03, 0.93, f"mean {y.mean():.1f}, SD {y.std():.1f}", transform=ax.transAxes, fontsize=fs(7.5), color=INK2)
+        if DT:
+            ax.set_ylabel("Density (log scale)")
+    if not DT:
+        axes[0].set_ylabel("Density (log scale)")
+    axes[1].annotate("normal with\nthe same\nmean and SD", xy=(35, 9e-4), xytext=(3, 0.012) if DT else (7, 0.02),
+                     fontsize=fs(7.5), color=INK, arrowprops=dict(arrowstyle="-", color=INK2, lw=0.7))
     fig.tight_layout()
-    fig.savefig(OUT / "fig1_unit_distributions.png"); plt.close(fig)
+    fig.savefig(OUT / "dt" / "Figure1.png" if DT else OUT / "fig1_unit_distributions.png"); plt.close(fig)
 
 
 def fig2():
     ps = np.array([0.02, 0.035, 0.05, 0.075, 0.10, 0.15, 0.20, 0.25, 0.30])
-    fig, axes = plt.subplots(1, 2, figsize=(6.6, 3.0), sharey=True)
+    if DT:
+        fig, axes = plt.subplots(2, 1, figsize=(5, 6.8), sharex=True)
+    else:
+        fig, axes = plt.subplots(1, 2, figsize=(6.6, 3.0), sharey=True)
     res = {}
     for kind, label, col in TYPES:
         tr, nr = [], []
@@ -86,25 +112,43 @@ def fig2():
             q = qmod(T_SPEC, L, k) + S_MEAS * rng.standard_normal((N_LOT, 24))
             tr.append(verdicts(q)); nr.append(verdicts(q.mean() + q.std() * rng.standard_normal((N_LOT, 24))))
         res[kind] = (np.array(tr), np.array(nr))
-    for j, (ax, title) in enumerate(zip(axes, ("Interpretation 1 (Q value, S1–S3)", "Interpretation 2 (individual limit, 6 → 12)"))):
+    titles = ("Interpretation 1", "Interpretation 2") if DT else ("Interpretation 1 (Q value, S1–S3)", "Interpretation 2 (individual limit, 6 → 12)")
+    for j, (ax, title) in enumerate(zip(axes, titles)):
         for kind, label, col in TYPES:
             tr, nr = res[kind]
-            ax.plot(ps, tr[:, j], color=col, lw=2.0)
-            ax.plot(ps, nr[:, j], color=col, lw=1.4, ls="--")
-            if j == 0:
+            ax.plot(ps, tr[:, j], color=col, lw=2.4 if DT else 2.0)
+            ax.plot(ps, nr[:, j], color=col, lw=1.8 if DT else 1.4, ls="--")
+            if DT:
+                if j == 0:   # one direct label per type, at the end of its solid curve; Interpretation 2 uses the same colours
+                    ax.text(ps[-1] + 0.008, tr[-1, j] + {"S slow release": 0.02, "O spread opening": -0.04, "M mixed": 0.0}[kind],
+                            label, color=col, fontsize=FS, va="center")
+            elif j == 0:
                 ax.text(ps[-1] + 0.006, tr[-1, j], label, color=INK2, fontsize=7.2, va="center")
             else:
                 ax.text(ps[-1] + 0.006, nr[-1, j] + {"S slow release": -0.03, "O spread opening": 0.02, "M mixed": -0.02}[kind],
                         label + " (normal)", color=INK2, fontsize=7.2, va="center")
         if j == 1:
-            ax.text(0.215, 0.17, "true: identical for\nall three types", color=INK2, fontsize=7.2)
-        ax.set_xlim(0, 0.36); ax.set_ylim(-0.02, 1.02)
-        ax.set_xlabel(f"Fraction of units below R at {T_SPEC:.0f} min (p)")
-        ax.set_title(title, loc="left", fontsize=9, color=INK)
-    axes[0].set_ylabel("Probability of failing")
+            if DT:
+                ax.text(ps[-1] + 0.008, tr[-1, j] - 0.06, "true, all\nthree types", color=INK2, fontsize=FS, va="center")
+            else:
+                ax.text(0.215, 0.17, "true: identical for\nall three types", color=INK2, fontsize=7.2)
+        ax.set_xlim(0, 0.50 if DT else 0.36); ax.set_ylim(-0.02, 1.02)
+        if DT:
+            ax.set_xticks([0, 0.1, 0.2, 0.3]); ax.set_ylabel("Probability of failing")
+            if j == 1:
+                ax.set_xlabel("Fraction of units below R (p)")
+        else:
+            ax.set_xlabel(f"Fraction of units below R at {T_SPEC:.0f} min (p)")
+        ax.set_title(title, loc="left", fontsize=fs(9), color=INK)
     from matplotlib.lines import Line2D
-    fig.legend([Line2D([], [], color=INK2, lw=2), Line2D([], [], color=INK2, lw=1.4, ls="--")],
-               ["true (unit model)", "normal with the same mean and SD"], loc="upper center", ncol=2, fontsize=7.5,
+    handles = [Line2D([], [], color=INK2, lw=2), Line2D([], [], color=INK2, lw=1.4, ls="--")]
+    if DT:   # solid and dashed are explained in the legend above the panels
+        fig.legend(handles, ["true", "normal"], loc="upper center", ncol=2, fontsize=FS, bbox_to_anchor=(0.5, 1.0))
+        fig.tight_layout(rect=(0, 0, 1, 0.95))
+        fig.savefig(OUT / "dt" / "Figure2.png"); plt.close(fig)
+        return ps, res
+    axes[0].set_ylabel("Probability of failing")
+    fig.legend(handles, ["true (unit model)", "normal with the same mean and SD"], loc="upper center", ncol=2, fontsize=7.5,
                bbox_to_anchor=(0.5, 1.0))
     fig.tight_layout(rect=(0, 0, 1, 0.92))
     fig.savefig(OUT / "fig2_true_vs_normal.png"); plt.close(fig)
@@ -138,18 +182,28 @@ def fig3():
 
 
 def fig4():
-    fig, axes = plt.subplots(1, 2, figsize=(6.6, 2.6), sharey=True)
+    if DT:
+        fig, axes = plt.subplots(2, 1, figsize=(5, 6.4), sharex=True)
+    else:
+        fig, axes = plt.subplots(1, 2, figsize=(6.6, 2.6), sharey=True)
     ts = np.array([20, 30, 40, 50, 60])
     for ax, (cond, title) in zip(axes, (("A", "On opening"), ("B", "After 80 days at 25 °C / 81 % RH"))):
         for i, (o, t50, pct) in enumerate(NG.DATA[cond]):
             L, k, _ = NG.fit_unit(o, t50, pct)
             tt = np.linspace(0, 70, 300)
             col = (C["blue"], C["orange"], C["aqua"], C["yellow"])[i]
-            ax.plot(tt, NG.model(tt, L, k), color=col, lw=1.6)
-            ax.plot(np.r_[o, t50, ts], np.r_[0, 50, pct], "o", color=col, ms=4, mec="white", mew=0.6)
+            ax.plot(tt, NG.model(tt, L, k), color=col, lw=2.0 if DT else 1.6)
+            ax.plot(np.r_[o, t50, ts], np.r_[0, 50, pct], "o", color=col, ms=6 if DT else 4, mec="white", mew=0.8 if DT else 0.6)
         ax.set_xlim(0, 70); ax.set_ylim(-3, 105)
-        ax.set_xlabel("Time (min)")
-        ax.set_title(title, loc="left", fontsize=9, color=INK)
+        if not DT or ax is axes[-1]:
+            ax.set_xlabel("Time (min)")
+        ax.set_title(title, loc="left", fontsize=fs(9), color=INK)
+        if DT:
+            ax.set_ylabel("Amount dissolved (%)")
+    if DT:   # points and lines are explained in the caption
+        fig.tight_layout()
+        fig.savefig(OUT / "dt" / "Figure3.png"); plt.close(fig)
+        return
     axes[0].set_ylabel("Amount dissolved (%)")
     axes[1].text(36, 12, "points: read from the published figure\nlines: unit model fitted to each tablet",
                  fontsize=7, color=INK2)
@@ -160,5 +214,7 @@ def fig4():
 if __name__ == "__main__":
     fig1(); print("fig1")
     fig2(); print("fig2")
-    fig3(); print("fig3")
+    if not DT:   # the equal-quality figure is not in the DT version; it draws only from the generator of equal_quality,
+                 # which Figure 4 does not use, so Figure 4 is unaffected
+        fig3(); print("fig3")
     fig4(); print("fig4")
